@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  overflow-x: hidden;
+}
+:root {
+  --transition: 0.3s ease-in-out all;
+  font-family: "Poppins", sans-serif;
+  --ti-cursor-color: red;
+  --ti-cursor-font-size: 200px;
+  --ti-cursor-font-family: serif;
+  --ti-cursor-line-height: 20px;
+}
+
+.page-100 {
+  height: 100vh;
+  width: 100vw;
+}
+.page-80 {
+  height: 80vh;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding-bottom: 20px;
+}
+/*---------------------------------------------Footer-----------------------------------------*/
+.footer {
+  width: 100vw;
+  height: 150px;
+  background-color: #24262c;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.footerText {
+  color: white;
+  letter-spacing: 2px;
+  margin: auto;
+  font-size: 10px;
+}
+.dragBox {
+  background-image: url("https://i.gifer.com/VhdL.gif");
+  background-size: 50px;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  width: 75px;
+  height: 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.boom {
+  position: absolute;
+
+  top: 50px;
+  left: 1px;
+  display: none;
+}
+.fireballText {
+  color: white;
+}
+.fireBall {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  z-index: 1;
+}
+/*--------------------------------------------------NAVBAR--------------------------------*/
+nav {
+  background-color: #24262c;
+  padding: 15px;
+  z-index: 7;
+  width: 100vw;
+}
+.fixed {
+  position: fixed;
+}
+.nav-center {
+  max-width: 1080px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+.logo {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+}
+
+.togglebtn {
+  display: none;
+}
+.header {
+  display: inline-block;
+  padding: 0 0px;
+}
+.linkContainer {
+  display: inline-block;
+  padding: 0 20px;
+}
+.navLink {
+  padding: 0;
+  margin: 0 15px;
+  position: relative;
+  display: inline-block;
+  height: auto;
+  color: grey;
+}
+.navLink:hover {
+  color: white;
+}
+.socialContainer {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  top: 25%;
+}
+.sidebarCont {
+  display: none;
+}
+.active {
+  border: 1px soild white;
+  color: white;
+}
+.hiddenFr {
+  display: none;
+}
+/*-----------------------------------------Hero page------------------------------------*/
+
+.page-hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/heroBack.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.meIrl {
+  display: inline-block;
+  height: calc(1rem + 30vh);
+  width: calc(1rem + 30vw);
+  position: relative;
+  right: 50px;
+}
+
+.hero-banner {
+  display: inline-block;
+  text-align: left;
+  padding: 0 3rem;
+  max-width: 1080px;
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+.typi {
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+}
+.borderBlinker {
+  height: 4rem;
+  width: 2px;
+  position: relative;
+  top: 15px;
+  left: 5px;
+  display: inline-block;
+  background-color: rgb(75, 75, 75);
+}
+.heroBtn {
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  padding: 3% 4%;
+  margin: 5% 5% 0 0;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.fire {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100px;
+}
+.fire2 {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100px;
+}
+/*-------------------G2H---------------------------*/
+.g2hSection {
+  background-color: #1c1c1c;
+  display: flex;
+}
+.containerG2H {
+  align-self: center;
+  display: flex;
+  background-color: #2f2f2f;
+  max-width: 1080px;
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.svgWorkCont {
+  display: inline-block;
+  height: 100%;
+  width: 55%;
+  position: relative;
+}
+.workerPic {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.textContentCont {
+  height: 100%;
+  width: 45%;
+  text-align: left;
+  display: flex;
+}
+.contentCont {
+  margin: auto;
+  width: 100%;
+  padding: 50px;
+  color: white;
+}
+.g2hTitle {
+  font-size: 2.6vw;
+  margin: 5px 0px;
+  color: #8db9d9;
+}
+.g2hParagraph {
+  font-size: 85%;
+  line-height: 2.5;
+  color: #74717a;
+}
+.counter {
+  font-size: 2rem;
+}
+.counterText {
+  font-size: 1.2vw;
+}
+/*-------------------WorkPage---------------------------*/
+.workTest {
+  background-color: red;
+  padding: 50%;
+  height: 100%;
+  width: 100%;
+}
+/*-------------------Why Hire---------------------------*/
+.whyHire {
+  color: white;
+  background-color: #1c1c1c;
+  width: 100vw;
+
+  overflow: hidden;
+}
+.yHireHeader {
+  text-align: center;
+}
+/*-------------------C2A---------------------------*/
+.C2A {
+  width: 100vw;
+
+  background-color: red;
+  background-color: #1c1c1c;
+}
+.C2AContainer {
+  max-width: 1080px;
+  margin: 0 auto 50px;
+
+  padding: 40px;
+  height: 25vh;
+  width: 80vw;
+  border-radius: 30px;
+  display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(180, 67, 255, 1) 0%,
+    rgba(29, 118, 253, 1) 30%,
+    rgba(69, 252, 252, 1) 100%
+  );
+}
+.C2AContainer h1 {
+  display: inline-block;
+  color: white;
+  align-self: center;
+  padding-right: 5vw;
+  padding-left: 6vw;
+}
+.btnCont {
+  display: flex;
+
+  align-items: center;
+}
+.C2Abtn {
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 0 15px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+.C2ABtn1 {
+  background-color: white;
+  color: black;
+}
+.C2ABtn2 {
+  border: 3px white solid;
+  color: white;
+}
+.C2ABtn1:hover {
+  background-color: rgb(184, 184, 184);
+}
+.C2ABtn2:hover {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1125px) {
+  .C2AContainer h1 {
+    display: inline-block;
+    color: white;
+    align-self: center;
+    font-size: 3vw;
+    padding: 0 15px;
+  }
+
+  .C2Abtn {
+    padding: 5px 5px;
+    margin: 0 15px;
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 759px) {
+  .C2AContainer {
+    margin: 50px auto 50px;
+    padding: 40px;
+    height: auto;
+    width: 80vw;
+    border-radius: 30px;
+    display: block;
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      rgba(180, 67, 255, 1) 0%,
+      rgba(29, 118, 253, 1) 30%,
+      rgba(69, 252, 252, 1) 100%
+    );
+    overflow: hidden;
+  }
+  .C2AContainer h1 {
+    display: block;
+    padding: 0;
+    color: white;
+    font-size: 6vw;
+    text-align: center;
+    margin: auto;
+  }
+
+  .C2Abtn {
+    padding: 2% 2%;
+    font-size: 3vw;
+    margin: auto;
+  }
+  .btnCont {
+    padding: 20px 0;
+  }
+}
+/*-------------------C2A END---------------------------*/
+/*-----------------RECENT PROJECTS-----------------*/
+.recentPro {
+  background-color: #1c1c1c;
+}
+.titleBar {
+  color: white;
+  text-align: center;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.contentRecPro {
+  width: 100vw;
+  height: 80%;
+  max-width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+}
+@media only screen and (min-width: 0px) and (max-width: 890px) {
+  .contentRecPro {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+/*---------Work Card-------------------------*/
+
+.workCardCont {
+  background-color: #2f2f2f;
+  margin: 50px auto;
+  border-radius: 30px;
+  width: 275px;
+  min-height: 325px;
+  position: relative;
+}
+.workCardTextCont {
+  color: white;
+  margin: 0;
+}
+.workCardCont h3 {
+  text-align: center;
+  font-size: 20px;
+}
+.workCardCont p {
+  margin: auto;
+  padding: 0 15px 15px;
+  font-size: 14px;
+}
+.workCardCont a {
+  text-align: center;
+  background-color: grey;
+  padding: 15px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+.workCardPic {
+  height: 150px;
+  width: 100%;
+  margin: 0;
+}
+.seeMore {
+  border: 2px white solid;
+  display: inline-block;
+  color: white;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 50px;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1049px) {
+  .cardCont {
+    width: 100vw;
+    height: 80%;
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .simpleCard {
+    border-radius: 30px;
+    margin: 30px 30px;
+    overflow: hidden;
+    display: flex;
+  }
+  .cardSvg {
+    height: 80%;
+    width: 80%;
+    overflow: hidden;
+    position: absolute;
+  }
+  .cardSvgCont {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    overflow: hidden;
+    left: 4%;
+    top: 4%;
+  }
+  .textContent {
+    text-align: left;
+
+    height: 100%;
+    width: 70%;
+    display: inline-block;
+    padding: 15px;
+    overflow: hidden;
+  }
+  .textContent h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .whyHire {
+    width: 100vw;
+    height: auto;
+
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 749px) {
+  .whyHire {
+    width: 100vw;
+    height: auto;
+
+    overflow: hidden;
+  }
+  .cardCont {
+    width: 100vw;
+    height: 100%;
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .simpleCard {
+    border-radius: 15px;
+    margin: 10px 15px;
+    overflow: hidden;
+    display: flex;
+  }
+  .cardSvg {
+    height: 80%;
+    width: 80%;
+    overflow: hidden;
+    position: absolute;
+  }
+  .cardSvgCont {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    overflow: hidden;
+    left: 4%;
+    top: 4%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .textContent {
+    text-align: left;
+
+    height: 100%;
+    width: 70%;
+    display: inline-block;
+    padding: 15px;
+    overflow: hidden;
+  }
+  .textContent h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .cardCont {
+    width: 100vw;
+    height: 80%;
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .simpleCard {
+    border-radius: 30px;
+    margin: 30px 30px 100px;
+    overflow: hidden;
+  }
+  .cardSvgCont {
+    height: 40%;
+    overflow: hidden;
+    align-items: center;
+  }
+  .cardSvg {
+    height: 125px;
+  }
+  .textContent {
+    text-align: center;
+    overflow: hidden;
+    height: 60%;
+    padding: 20px;
+  }
+  .textContent h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+/*--------------------mobile sized css---------------------------------------*/
+@media only screen and (max-width: 630px) and (min-width: 10px) {
+  a {
+    text-decoration: none;
+
+    padding-bottom: 20px;
+    color: white;
+  }
+  .socialSidebar {
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 20px;
+  }
+  .nav-center {
+    max-width: 1080px;
+    margin: auto;
+    position: relative;
+    text-align: left;
+  }
+  .socialContainer {
+    display: none;
+  }
+  .linkContainer {
+    display: none;
+  }
+  nav {
+    width: 100vw;
+  }
+  .test {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+  }
+  .modalBackground {
+    right: 21%;
+    top: 25px;
+    position: absolute;
+    background: radial-gradient(
+      circle,
+      rgba(2, 0, 36, 1) 4%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(2, 0, 36, 1) 80%
+    );
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+  }
+  .hidden {
+    right: 20%;
+    top: 25px;
+    position: absolute;
+    border-radius: 100%;
+    width: 1px;
+    height: 1px;
+    background: black;
+  }
+  .togglebtn {
+    z-index: 4;
+    display: inline-block;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: white;
+    line-height: 1rem;
+    right: 10%;
+  }
+  .sidebarCont {
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+    margin: 100px 0;
+    position: absolute;
+    color: white;
+    z-index: 3;
+    overflow: hidden;
+  }
+  .sideLink {
+    font-size: 20px;
+
+    padding-top: 20px;
+    width: 100vw;
+    text-align: center;
+  }
+  .sideLink:hover {
+    background-color: gray;
+  }
+  .mainCont {
+    position: relative;
+  }
+  /*----------------------------mobile hero page------------------------------------------*/
+
+  .page-hero {
+    height: 100vh;
+  }
+  .logo {
+    margin-left: 70px;
+  }
+  .typi {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+  }
+  .typiCont {
+    overflow-x: hidden;
+
+    width: 100vw;
+  }
+  .heroBtn {
+    margin-top: 50px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  /*-------------------Why Hire---------------------------*/
+}
+/*-----------------------where the media query ends ---------------*/
+@media only screen and (min-width: 15px) and (max-width: 763px) {
+  .page-hero img {
+    display: none;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 900px) {
+  /*-------------------G2H---------------------------*/
+  .g2hSection {
+    background-color: #1c1c1c;
+    display: flex;
+  }
+  .containerG2H {
+    align-self: center;
+    display: flex;
+    background-color: #2f2f2f;
+    max-width: 1080px;
+    height: 70vh;
+    width: 80vw;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .svgWorkCont {
+    display: inline-block;
+    height: 70vh;
+    width: 55vw;
+    position: relative;
+  }
+  .workerPic {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .textContentCont {
+    height: 100vh;
+    width: 40vw;
+    text-align: left;
+  }
+  .contentCont {
+    width: 100%;
+    color: white;
+
+    height: 100%;
+    padding-top: 100px;
+  }
+  .g2hTitle {
+    font-size: 2vw;
+    margin: 5px 0px;
+    color: #8db9d9;
+  }
+  .g2hParagraph {
+    font-size: 1.5vw;
+    line-height: 2.5;
+    color: #74717a;
+  }
+  .counter {
+    font-size: 2rem;
+  }
+  .counterText {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .g2hTitle {
+    font-size: 2rem;
+    margin: 5px 0px;
+    color: #8db9d9;
+  }
+  .g2hParagraph {
+    font-size: 1rem;
+    line-height: 2.5;
+    color: #74717a;
+  }
+  .counter {
+    font-size: 2rem;
+  }
+  .counterText {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 558px) and (max-width: 749px) {
+  /*-------------------G2H---------------------------*/
+  .g2hSection {
+    background-color: #1c1c1c;
+  }
+  .containerG2H {
+    background-color: #2f2f2f;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 30px;
+    display: block;
+  }
+  .svgWorkCont {
+    height: 50%;
+    width: 100%;
+
+    margin: 0;
+  }
+  .workerPic {
+    height: 100%;
+    width: 100%;
+  }
+  .textContentCont {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0px 50px;
+    display: flex;
+  }
+  .contentCont {
+    color: white;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+  }
+  .g2hTitle {
+    font-size: 4vw;
+    margin: 5px 0px;
+    color: #8db9d9;
+  }
+  .g2hParagraph {
+    font-size: 2vw;
+    line-height: 2.5;
+    color: #74717a;
+  }
+  .counter {
+    font-size: 2rem;
+  }
+  .counterText {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 557px) {
+  /*-------------------G2H---------------------------*/
+  .g2hSection {
+    background-color: #1c1c1c;
+  }
+  .containerG2H {
+    background-color: #2f2f2f;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 30px;
+    display: block;
+  }
+  .svgWorkCont {
+    height: 40%;
+    width: 100%;
+    margin: 0;
+  }
+  .workerPic {
+    height: 100%;
+    width: 100%;
+  }
+  .textContentCont {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0px 50px;
+    display: flex;
+  }
+  .contentCont {
+    color: white;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+  }
+  .g2hTitle {
+    font-size: 1.2rem;
+    margin: 10px 0px;
+    color: #8db9d9;
+  }
+  .g2hParagraph {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #74717a;
+    overflow: hidden;
+  }
+  .counter {
+    font-size: 2rem;
+  }
+  .counterText {
+    font-size: 0.8rem;
+  }
+}
